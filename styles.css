@@ -9,3 +9,19 @@ body {
 .car {
   width: 100px;
 }
+
+.car.face-east {
+  transform: rotate(0deg);
+}
+
+.car.face-south {
+  transform: rotate(90deg);
+}
+
+.car.face-west {
+  transform: rotate(180deg);
+}
+
+.car.face-north {
+  transform: rotate(270deg);
+}
