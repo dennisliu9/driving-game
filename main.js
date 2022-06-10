@@ -17,6 +17,7 @@ var carData = {
   orientation: 0,
   xCoord: 0,
   yCoord: 0,
+  intervalArr: [],
   rotateCar: function (turnKey) {
     var turnAngle = 90;
     if (turnKey === 'ArrowRight') {
@@ -51,6 +52,13 @@ document.addEventListener('keydown', function (event) {
   }
 
   if ([' ', 'ArrowUp'].includes(keyPressed)) {
-    setInterval(moveCarFoward, 16, carData);
+    carData.intervalArr.push(setInterval(moveCarFoward, 16, carData));
+  }
+
+  if (['Enter'].includes(keyPressed)) {
+    while (carData.intervalArr.length > 0) {
+      var clearId = carData.intervalArr.pop();
+      clearInterval(clearId);
+    }
   }
 });
