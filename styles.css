@@ -8,5 +8,6 @@ body {
 
 .car {
   width: 100px;
-  transition: transform ease 1s;
+  transition: transform ease 300ms;
+  position: absolute;
 }
