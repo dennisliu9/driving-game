@@ -7,9 +7,6 @@ r will be the translation amount at each step in the interval
 After each step in the interval, update the x and the y by multiplying the
   step amount (eg 3px) by cos(orientation) and sin(orientation)
 Update translate(x, y)
-
-BACK HOME:
-set offset!
 */
 
 var carData = {
@@ -19,7 +16,7 @@ var carData = {
   yCoord: 0,
   intervalArr: [],
   rotateCar: function (turnKey) {
-    var turnAngle = 90;
+    var turnAngle = 7;
     if (turnKey === 'ArrowRight') {
       this.orientation += turnAngle;
     } else if (turnKey === 'ArrowLeft') {
